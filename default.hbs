@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {{!--archivo que contiene configuración head se encuentra en la carpeta -> partials--}}
+    {{> "head"}}
+    
+</head>
+<body class="{{body_class}}">
+    
+    {{!--Menu de navegación--}}
+    {{navigation}}
+ 
+    {{!-- Todo el contenido principal se inserta aquí, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+    {{!-- FOOTER --}}
+    {{> "footer"}}
+
+    {{!-- Insertar jQuery antes de `{{ghost_foot}}` para que jQuery pueda ser utilizado en la inyección de código --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{!-- Ghost genera scripts y datos importantes con esta etiqueta --}}
+    {{ghost_foot}}
+    {{!--Script principal--}}
+    <script src="{{asset "js/app.js"}}"></script>
+</body>
+</html>

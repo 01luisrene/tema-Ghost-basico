@@ -1,0 +1,10 @@
+<nav class="menu">
+	{{!-- Lista de items menú --}}
+    <ul class="nav no-lista">
+      {{#foreach navigation}}
+      <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}">
+        <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a></li>
+      </li>
+      {{/foreach}}
+    </ul>
+</nav>
