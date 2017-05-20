@@ -1,6 +1,11 @@
 <nav class="menu">
 	{{!-- Lista de items menú --}}
-    <ul class="nav no-lista">
+    <ul class="nav no-lista container">
+		  <li class="nav-item home">
+	    	<a class="nav-link" href="{{@blog.url}}" title="{{@blog.title}}">
+	        {{@blog.title}}
+	      </a>
+	    </li>
       {{#foreach navigation}}
       <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}">
         <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a></li>

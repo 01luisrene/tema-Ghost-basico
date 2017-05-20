@@ -1,13 +1,16 @@
+{{!-- Agrega la plantilla por defecto que contiene configuraciones predeterminadas --}}
 {{!< default}}
-<header>
+<header class="container">
+	{{!-- Titulo del blog --}}
 	<h1 class="page-title">{{@blog.title}}</h1>
+	{{!-- Descripción del blog --}}
   <h2 class="page-description">{{@blog.description}}</h2>    
 </header>
 
-<main role="main">
-  <!-- includes the post loop - partials/loop.hbs -->
+<main role="main" class="container">
+  {{!-- Incluye el bucle de los posts - partials/loop.hbs --}}
   {{> "loop"}}
 </main>
 
-<!-- Previous/next page links - displayed on every page -->
+{{!-- Anterior/Siguiente enlaces de paginas --}}
 {{pagination}}

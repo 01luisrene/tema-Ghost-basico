@@ -1,26 +1,122 @@
 body{
-	background: #eee;
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
 }
-
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Lato', sans-serif;
 }
-body>nav, 
-body>header, 
-body>main,
-body>article,
-body>footer{
+img{
+	max-width: 100%;
+}
+.container{
 	width: 60%;
 	margin: 0 auto;
 }
+/*Titulo del blog*/
+.page-title{
+	color: #557AF1;
+	text-align: center;
+	font-size: 2.5em;
+	position: relative;
+}
+.page-title::before{
+	background: #557AF1;
+	content: "";
+	height: 3px;
+	width: 80px;
+	margin-left: -40px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
 
+/*Descripción del blog*/
+.page-description{
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	text-align: center;
+	padding: 1em;
+}
+/*Menú de navegación*/
+.menu{
+	background: #C3CFF6;
+	padding: 15px 5px;
+}
 .menu .nav{
 	display: flex;
+	align-items: center;
 	list-style-type: none;
 	padding-left: 0;
-	margin: 0;
 }
 .menu .nav .nav-item{
 	margin-right: 5px;
+}
+.menu .nav .nav-item.home .nav-link{
+	color: #2F2D2D;
+	font-size: 1.5em;
+	margin-right: 20px;
+}
+.menu .nav .nav-item.home .nav-link:hover{
+	text-decoration: none !important;
+	border: thin solid transparent !important;
+}
+.menu .nav .nav-item .nav-link{
+	border: thin solid transparent;
+	color: #2D57A5;
+	text-decoration: none;
+	transition: 0.500s;
+	padding: 10px;
+}
+.menu .nav .nav-item .nav-link:hover{
+	text-decoration: underline;
+	border: thin solid #FDFDFD;
+	border-radius: 3px;
+}
+.nav-current .nav-link{
+	border: thin solid #FDFDFD !important;
+	border-radius: 3px;
+	padding: 10px;
+}
+/*Estilos para el loop*/
+.post-meta{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.author-link{
+	display: flex;
+	align-items: center;
+}
+.author-image{
+	border-radius: 100%;
+	margin-right: 10px;
+	height: 25px;
+	width: 25px;
+}
+.tags{
+	margin: 0 10px;
+}
+/*Paginación*/
+.pagination{
+	display: flex;
+	justify-content: center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.newer-posts{
+	margin-right: 10px;
+}
+.older-posts{
+	margin-left: 10px;
+}
+/*Footer*/
+.footer{
+	background: #CECDCD;
+	overflow: hidden;
+	padding: 10px;
+}
+.footer p{
+	text-align: center;
+	padding: 0;
+	margin: 0;
 }

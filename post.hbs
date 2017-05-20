@@ -1,21 +1,27 @@
+{{!-- Agrega la plantilla por defecto que contiene configuraciones predeterminadas --}}
 {{!< default}}
-<!-- Everything inside the #post tags pulls data from the post -->
+<!-- Todo dentro de las etiquetas #post extrae datos de la publicación -->
 {{#post}}
-
-<article class="{{post_class}}">
+<article class="{{post_class}} container">
   <header class="post-header">
+    {{!-- Titulo del post --}}
     <h1 class="post-title">{{title}}</h1>
     <section class="post-meta">
+      {{!-- Fecha de publicación --}}
       <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
         {{date format="DD MMMM YYYY"}}
       </time> 
-      {{tags prefix=" on "}}
+      {{!-- Etiquetas --}}
+      {{#if tags}}
+        <div class="tags">
+          {{tags separator=", " prefix="Etiquetado en: "}}
+        </div>
+      {{/if}}
     </section>  
   </header>
   <section class="post-content">
+    {{!-- Contenido del post --}}
     {{content}}
-
   </section>     
 </article>
-
 {{/post}} 
